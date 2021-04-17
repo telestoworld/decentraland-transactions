@@ -28,7 +28,7 @@ provision-bundled:
 		@cp ./static/api-extractor.json ./dist/api-extractor.json
 		@cp ./static/tsconfig.json ./dist/tsconfig.json
 		cd ./dist && ../node_modules/.bin/api-extractor run $(LOCAL_ARG) --typescript-compiler-folder ../node_modules/typescript
-		@mv ./dist/dist/decentraland-transactions.d.ts ./dist
+		@mv ./dist/dist/telestoworld-transactions.d.ts ./dist
 		@rm ./dist/tsconfig.json
 		@rm ./dist/tsdoc-metadata.json
 		@rm -rf ./dist/node_modules

@@ -40,10 +40,10 @@ export default {
     {
       file: './dist/index.js',
       format: 'umd',
-      name: 'decentraland-transactions',
+      name: 'telestoworld-transactions',
       sourcemap: true,
       amd: {
-        id: 'decentraland-transactions'
+        id: 'telestoworld-transactions'
       }
     }
   ]

@@ -12,16 +12,16 @@ describe('#getContract', () => {
     )
   })
 
-  describe('MANAToken', () => {
-    const abi = abis.MANAToken
+  describe('TELOToken', () => {
+    const abi = abis.TELOToken
 
     it('should return the configuration for Goerli', () => {
       expect(
-        getContract(ContractName.MANAToken, ChainId.ETHEREUM_GOERLI)
+        getContract(ContractName.TELOToken, ChainId.ETHEREUM_GOERLI)
       ).to.deep.eq({
         abi,
         address: '0xe7fDae84ACaba2A5Ba817B6E6D8A2d415DBFEdbe',
-        name: 'MANAToken',
+        name: 'TELOToken',
         version: '1',
         chainId: ChainId.ETHEREUM_GOERLI
       })
@@ -29,11 +29,11 @@ describe('#getContract', () => {
 
     it('should return the configuration for Mumbai', () => {
       expect(
-        getContract(ContractName.MANAToken, ChainId.MATIC_MUMBAI)
+        getContract(ContractName.TELOToken, ChainId.MATIC_MUMBAI)
       ).to.deep.eq({
         abi,
         address: '0x882Da5967c435eA5cC6b09150d55E8304B838f45',
-        name: 'Decentraland MANA (PoS)',
+        name: 'Telestoworld TELO (PoS)',
         version: '1',
         chainId: ChainId.MATIC_MUMBAI
       })
@@ -41,11 +41,11 @@ describe('#getContract', () => {
 
     it('should return the configuration for Matic Mainnet', () => {
       expect(
-        getContract(ContractName.MANAToken, ChainId.MATIC_MAINNET)
+        getContract(ContractName.TELOToken, ChainId.MATIC_MAINNET)
       ).to.deep.eq({
         abi,
         address: '0xA1c57f48F0Deb89f569dFbE6E2B7f46D33606fD4',
-        name: '(PoS) Decentraland MANA',
+        name: '(PoS) Telestoworld TELO',
         version: '1',
         chainId: ChainId.MATIC_MAINNET
       })
@@ -53,9 +53,9 @@ describe('#getContract', () => {
 
     it('should throw if the chain is not supported', () => {
       expect(() =>
-        getContract(ContractName.MANAToken, ChainId.ETHEREUM_ROPSTEN)
+        getContract(ContractName.TELOToken, ChainId.ETHEREUM_ROPSTEN)
       ).to.throw(
-        `Could not get a valid contract for ${ContractName.MANAToken} using chain ${ChainId.ETHEREUM_ROPSTEN}`
+        `Could not get a valid contract for ${ContractName.TELOToken} using chain ${ChainId.ETHEREUM_ROPSTEN}`
       )
     })
   })
@@ -64,7 +64,7 @@ describe('#getContract', () => {
 describe('#getContractName', () => {
   it('should return the contract name by address', () => {
     const address = '0x882Da5967c435eA5cC6b09150d55E8304B838f45'
-    expect(getContractName(address)).to.eq(ContractName.MANAToken)
+    expect(getContractName(address)).to.eq(ContractName.TELOToken)
   })
 
   it('should support addresses from multiple chains', () => {

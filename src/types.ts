@@ -49,7 +49,7 @@ export enum ContractName {
   ERC721 = 'ERC721',
   ERC721CollectionV2 = 'ERC721CollectionV2',
   Forwarder = 'Forwarder',
-  MANAToken = 'MANAToken',
+  TELOToken = 'TELOToken',
   Marketplace = 'Marketplace',
   Rarities = 'Rarities'
 }

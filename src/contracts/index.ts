@@ -25,7 +25,7 @@ const contracts: Record<
   [ContractName.ERC721]: erc721,
   [ContractName.ERC721CollectionV2]: erc721CollectionV2,
   [ContractName.Forwarder]: forwarder,
-  [ContractName.MANAToken]: manaToken,
+  [ContractName.TELOToken]: manaToken,
   [ContractName.Marketplace]: marketplace,
   [ContractName.Rarities]: rarities
 }

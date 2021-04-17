@@ -1,4 +1,4 @@
-export const MANAToken = [
+export const TELOToken = [
   { type: 'constructor', stateMutability: 'nonpayable', inputs: [] },
   {
     type: 'event',

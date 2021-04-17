@@ -6,7 +6,7 @@ export const erc721CollectionV2 = {
     version: '2',
     abi: abis.ERC721CollectionV2,
     address: '',
-    name: 'Decentraland Collection',
+    name: 'Telestoworld Collection',
     chainId: ChainId.MATIC_MUMBAI
   }
 }

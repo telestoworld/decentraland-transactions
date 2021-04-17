@@ -1,9 +1,9 @@
-<img src="https://ui.decentraland.org/decentraland_256x256.png" height="128" width="128" />
+<img src="https://ui.telestoworld.org/telestoworld_256x256.png" height="128" width="128" />
 
-# Decentraland Transactions
+# Telestoworld Transactions
 
-[![NPM version](https://badge.fury.io/js/decentraland-transactions.svg)](https://npmjs.org/package/decentraland-transactions@latest)
-[![Install Size](https://packagephobia.now.sh/badge?p=decentraland-transactions@latest)](https://packagephobia.now.sh/result?p=decentraland-transactions@latest)
+[![NPM version](https://badge.fury.io/js/telestoworld-transactions.svg)](https://npmjs.org/package/telestoworld-transactions@latest)
+[![Install Size](https://packagephobia.now.sh/badge?p=telestoworld-transactions@latest)](https://packagephobia.now.sh/result?p=telestoworld-transactions@latest)
 
 Send meta transactions
 
@@ -55,10 +55,10 @@ import {
   getContract,
   ContractName,
   ChainId
-} from 'decentraland-transactions'
+} from 'telestoworld-transactions'
 import { ethers } from 'ethers'
 
-const manaConfig = getContract(ContractName.MANAToken, ChainId.MATIC_MUMBAI)
+const manaConfig = getContract(ContractName.TELOToken, ChainId.MATIC_MUMBAI)
 const manaContract = new ethers.Contract(
   manaConfig.address,
   manaConfig.abi,
@@ -76,7 +76,7 @@ const txHash = await sendMetaTransaction(
 
 ## getContract
 
-Returns data for a collection of useful Decentraland [contracts](#ContractName) enum. for the different Ethereum [chains](#ChainId). It contains all the information necessary to call `sendMetaTransaction`.
+Returns data for a collection of useful Telestoworld [contracts](#ContractName) enum. for the different Ethereum [chains](#ChainId). It contains all the information necessary to call `sendMetaTransaction`.
 
 **Definition**
 
@@ -87,7 +87,7 @@ function getContract(contractName: ContractName, chainId: ChainId): ContractData
 **Usage**
 
 ```typescript
-getContract(ContractName.MANAToken, ChainId.ROPSTEN)
+getContract(ContractName.TELOToken, ChainId.ROPSTEN)
 ```
 
 ## Types
@@ -100,7 +100,7 @@ type Configuration = {
 }
 ```
 
-Check [configuration.ts](https://github.com/decentraland/decentraland-transactions/blob/master/src/configuration.ts) to get an up to date snapshot of the current configuration values.
+Check [configuration.ts](https://github.com/telestoworld/telestoworld-transactions/blob/master/src/configuration.ts) to get an up to date snapshot of the current configuration values.
 
 ### Provider
 
@@ -123,7 +123,7 @@ Supported contract names
 
 ```typescript
 enum ContractName {
-  MANAToken = 'MANAToken'
+  TELOToken = 'TELOToken'
 }
 ```
 
@@ -174,16 +174,16 @@ type DomainData = {
 
 # Example use
 
-Example using [decentraland-connect](https://github.com/decentraland/decentraland-connect) and [ethers](https://github.com/ethers-io/ethers.js) to get the providers
+Example using [telestoworld-connect](https://github.com/telestoworld/telestoworld-connect) and [ethers](https://github.com/ethers-io/ethers.js) to get the providers
 
 ```typescript
-import { connection, ProviderType } from 'decentraland-connect'
+import { connection, ProviderType } from 'telestoworld-connect'
 import {
   sendMetaTransaction,
   getContract,
   ContractName,
   ChainId
-} from 'decentraland-transactions'
+} from 'telestoworld-transactions'
 
 async function transferMana() {
   try {
@@ -196,8 +196,8 @@ async function transferMana() {
       new ethers.providers.JsonRpcProvider('https://rpc-mumbai.matic.today'),
       // Function signature
       '0xa9059cbb000000000000000000000000a8d82b0bf686eee78eb5ec882cac98fdd1335ef50000000000000000000000000000000000000000000000000000000000000001',
-      // Mana contract for MATIC_MUMBAI
-      getContract(ContractName.MANAToken, ChainId.MATIC_MUMBAI)
+      // Telo contract for MATIC_MUMBAI
+      getContract(ContractName.TELOToken, ChainId.MATIC_MUMBAI)
     )
 
     console.log('Result tx hash', txHash)
@@ -225,4 +225,4 @@ npm run test:report
 
 # Copyright
 
-This repository is protected with a standard Apache 2 license. See the terms and conditions in the [LICENSE](https://github.com/decentraland/decentraland-transactions/blob/master/LICENSE) file.
+This repository is protected with a standard Apache 2 license. See the terms and conditions in the [LICENSE](https://github.com/telestoworld/telestoworld-transactions/blob/master/LICENSE) file.
